@@ -1,0 +1,11 @@
+<aura:component controller="Storage" implements="force:lightningQuickActionWithoutHeader,force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,lightning:actionOverride" access="global">
+    
+    <aura:attribute name="storageSettings" type="Map" default="{}" />
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    
+    <lightning:card title="Storage Information">
+        <p>Data Storage available: {!v.storageSettings.Data_Storage_Remaining__c} MB of {!v.storageSettings.Data_Storage_Max__c} MB</p><br/>
+        <p>File Storage available: {!v.storageSettings.File_Storage_Remaining__c} MB of {!v.storageSettings.File_Storage_Max__c} MB</p><br/>
+        <lightning:button class="slds-m-top_small"  label="Refresh"  onclick="{!c.refreshStorageValues}" variant="brand" />
+    </lightning:card>
+</aura:component>

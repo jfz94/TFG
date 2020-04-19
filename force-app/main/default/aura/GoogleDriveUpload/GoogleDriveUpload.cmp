@@ -1,0 +1,12 @@
+<aura:component controller="GoogleDriveController" implements="lightning:isUrlAddressable,force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    <aura:attribute name="accessToken" type="String" />
+    <aura:attribute name="myRecordId" type="String" default="0053X00000Bmmh7QAB" description="This is the record where we will temporary store the file"/>
+    
+    <lightning:card title="Google Drive">
+        <p class="slds-p-horizontal_small">
+            Extensions accepted: {!$Label.c.EXTENSIONS_ACCEPTED_GD}
+            <lightning:fileUpload label="Upload files to Drive" name="fileUploader"
+				multiple="false" accept="{!$Label.c.EXTENSIONS_ACCEPTED_GD}" recordId="{!v.myRecordId}" onuploadfinished="{!c.handleFilesChange}" />
+        </p>
+    </lightning:card>
+</aura:component>

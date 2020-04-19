@@ -1,0 +1,32 @@
+<aura:component controller="GitHub" implements="force:lightningQuickActionWithoutHeader,force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,lightning:actionOverride" access="global">
+    
+    <aura:attribute name="githubUsername" type="String"  description="" access="private" />
+	
+    <aura:attribute name="record" type="Object" description="The record object to be displayed" />
+    <aura:attribute name="simpleRecord" type="Object" description="A simplified view record object to be displayed" />
+    <aura:attribute name="recordError" type="String" description="An error message bound to force:recordData"/>
+   
+    <force:recordData aura:id="repositoryId"
+                      layoutType="FULL"
+                      recordId="{!v.recordId}"
+                      targetError="{!v.recordError}"
+                      targetRecord="{!v.record}"
+                      targetFields ="{!v.simpleRecord}"
+                      mode="VIEW"/>
+    
+    <!-- Display Lightning Data Service errors, if any -->
+	<aura:if isTrue="{!not(empty(v.recordError))}">
+    	<div class="recordError">
+        	{!v.recordError}
+    	</div>
+	</aura:if>
+ 
+    <div>
+    	<header class="slds-modal__header">
+            <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">Refresh branches from repository {!v.simpleRecord.Name}</h2>
+        </header>
+        <br/><br/>
+        <lightning:button label="Enviar" class="slds-button slds-button_brand slds-align_absolute-center" onclick="{!c.getBranches}"/>
+    </div>	
+
+</aura:component>

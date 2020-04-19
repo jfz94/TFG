@@ -1,0 +1,18 @@
+[
+  {
+    "name": "add-license-1",
+    "commit": {
+      "sha": "354fad6bb096361a777de847bd94838aea8e2e39",
+      "url": "https://api.github.com/repos/jfz94/jfz94.github.io/commits/354fad6bb096361a777de847bd94838aea8e2e39"
+    },
+    "protected": false
+  },
+  {
+    "name": "master",
+    "commit": {
+      "sha": "9a46f807ece005cef2aea6ae1f668898f81df570",
+      "url": "https://api.github.com/repos/jfz94/jfz94.github.io/commits/9a46f807ece005cef2aea6ae1f668898f81df570"
+    },
+    "protected": false
+  }
+]

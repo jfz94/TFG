@@ -1,0 +1,23 @@
+<template>
+    <template if:true={fileID}>
+        <lightning-tabset variant="scoped">
+            <template for:each={tabs} for:item="tab">
+                <lightning-tab key={tab.value} label={tab.label} value={tab.value} onactive={setFileID}>
+                </lightning-tab>
+            </template>
+        </lightning-tabset>       
+        <c-show-pdf-by-id
+            height-in-rem={heightInRem}
+            file-id={fileID}
+        ></c-show-pdf-by-id>
+    </template>
+ 
+    <template if:false={fileID}>
+        <lightning-card><div class="slds-text-align_center">No related PDF file found.</div></lightning-card>
+    </template>
+ 
+    <!-- Conditionally render the error in error component. Taken from <a href="https://github.com/trailheadapps/lwc-recipes/tree/master/force-app/main/default/lwc/errorPanel">https://github.com/trailheadapps/lwc-recipes/tree/master/force-app/main/default/lwc/errorPanel</a> -->
+    <template if:true={error}>
+        <c-error-panel errors={error}></c-error-panel>
+    </template>
+</template>

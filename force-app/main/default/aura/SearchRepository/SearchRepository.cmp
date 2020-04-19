@@ -1,0 +1,64 @@
+<aura:component implements="flexiPage:availableForAllPageTypes,force:appHostable" controller="GitHub">
+
+    <aura:attribute name="itemNumber" type="Integer" description="Number of records to be created" />
+    <aura:attribute name="queryName" type="String" description="Repository name to search" />
+    <aura:attribute name="queryDescription" type="String" description="Repository description to search" />
+
+    <aura:attribute name="loaded" type="Boolean" default="false" />
+    <aura:attribute name="repoList" type="Repository__c[]" />
+
+    <!-- picklist -->
+    <aura:attribute name="orderOptions" type="String[]"/>
+    <aura:attribute name="selectedOrderOption" type="String"/>
+
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" /> 
+
+
+    <!--loading spinner start-->
+    <aura:if isTrue="{! v.loaded }">
+    	<lightning:spinner alternativeText="Loading" />
+    </aura:if>
+    <!-- Loading spinner end-->
+
+    <lightning:card title="Search Repositories">
+        <aura:set attribute="actions">
+           <lightning:buttonicon iconName="utility:chevrondown" alternativeText="down icon" onclick="{!c.toggleForm}"/>
+        </aura:set>
+       
+        <div aura:id="formDiv" class="slds-size_1-of-1 slds-p-around_medium">
+            <lightning:input aura:id="searchForm" type="String" value="{!v.queryName}" label="Repository Name" required="false" messageWhenValueMissing="Enter name" />
+            <lightning:input aura:id="searchForm" type="String" value="{!v.queryDescription}" label="Repository Description" required="false" messageWhenValueMissing="Enter description" />
+            <lightning:input aura:id="searchForm" type="number" value="{!v.itemNumber}" name="Items number" required="true" label="Number of searches" messageWhenValueMissing="Enter a number of repositories to be searched"/>
+            
+            <lightning:select aura:id="selectOrderOptions" label="Order option">
+                <option value="choose">Choose one...</option> 
+                <aura:iteration items="{!v.orderOptions}" var="val">
+                    <option text="{!val}"></option>
+                </aura:iteration> 
+            </lightning:select> 
+            <lightning:button class="slds-m-top_small"  label="Search"  onclick="{!c.doSearch}" variant="brand" />
+        </div>
+        
+        <aura:if isTrue="{!not(empty(v.repoList))}">
+            <table class="slds-table slds-table--bordered slds-table--striped slds-table--cell-buffer slds-table--fixed-layout">
+                <thead>
+                    <tr class="slds-text-heading--label">
+                    <th scope="col"><div class="slds-truncate" title="ID">ID</div></th>
+                    <th scope="col"><div class="slds-truncate" title="Name">Name</div></th>
+                    <th scope="col"><div class="slds-truncate" title="GitHub URL">GitHub URL</div></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <aura:iteration items="{!v.repoList}" var="item">
+                        <tr>
+                            <td scope="row"><div class="slds-truncate">{!item.Id}</div></td>
+                            <td scope="row"><div class="slds-truncate">{!item.Name}</div></td>
+                            <td scope="row"><div class="slds-truncate"><a href="{!item.GitHub_URL__c}">{!item.GitHub_URL__c}</a></div></td>
+                        </tr>
+                    </aura:iteration>
+                </tbody>
+            </table>
+        </aura:if>
+        
+    </lightning:card>
+</aura:component>
