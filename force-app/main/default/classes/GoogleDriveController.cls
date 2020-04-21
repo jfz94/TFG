@@ -32,7 +32,7 @@ public class GoogleDriveController {
         
         if(myBlob.size() < 12000000){
             // google drive folder
-            String FolderId='1SixfdkcmARs0QnQEj-O8et-qRaBuGkMJ';
+            String FolderId= System.Label.GOOGLE_DRIVE_FOLDER_ID;
             String boundary = '----------9889464542212';
             String delimiter = '\r\n--' + boundary + '\r\n';
             String close_delim = '\r\n--' + boundary + '--';
