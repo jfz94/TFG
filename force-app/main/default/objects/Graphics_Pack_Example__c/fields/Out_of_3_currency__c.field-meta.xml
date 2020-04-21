@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Out_of_3_currency__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF ( VALUE(TEXT(Out_of_3_rating__c)) &gt; 0, IMAGE(&quot;/servlet/servlet.FileDownload?file=01530000001HxYZ&quot;, &quot;£&quot;, 16, 16),&quot;&quot;)
+ +
+IF ( VALUE(TEXT(Out_of_3_rating__c)) &gt; 1, IMAGE(&quot;/servlet/servlet.FileDownload?file=01530000001HxYY&quot;, &quot;€&quot;, 16, 16),&quot;&quot;)
++
+IF ( VALUE(TEXT(Out_of_3_rating__c)) &gt; 2, IMAGE(&quot;/servlet/servlet.FileDownload?file=01530000001HxYX&quot;, &quot;$&quot;, 16, 16),&quot;&quot;)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Out of 3 Currency</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

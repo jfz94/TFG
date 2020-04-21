@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Up_or_Down_Thumbs__c</fullName>
+    <externalId>false</externalId>
+    <formula>CASE( Up_or_Down__c ,
+&quot;Up&quot;, IMAGE(&quot;/servlet/servlet.FileDownload?file=01530000001Hxfi&quot;,&quot;Up&quot;,16,16),
+&quot;Down&quot;, IMAGE(&quot;/servlet/servlet.FileDownload?file=01530000001Hxfh&quot;,&quot;Down&quot;,16,16),
+&quot;&quot;)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Up or Down Thumbs</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

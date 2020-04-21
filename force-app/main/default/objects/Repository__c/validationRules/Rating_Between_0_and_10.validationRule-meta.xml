@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Rating_Between_0_and_10</fullName>
+    <active>true</active>
+    <description>Validation rule to set up the rating between 0 (poor) and 10 (excellent)</description>
+    <errorConditionFormula>Rating__c &lt; 0 || Rating__c &gt; 10</errorConditionFormula>
+    <errorMessage>Rating should be between 0 and 10</errorMessage>
+</ValidationRule>

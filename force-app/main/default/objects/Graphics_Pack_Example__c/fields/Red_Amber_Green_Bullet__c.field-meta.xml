@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Red_Amber_Green_Bullet__c</fullName>
+    <externalId>false</externalId>
+    <formula>CASE(  Red_Amber_Green__c  ,
+&quot;Red&quot;, IMAGE(&quot;/servlet/servlet.FileDownload?file=01530000001HxWF&quot;,&quot;Red&quot;,16,16),
+&quot;Amber&quot;, IMAGE(&quot;/servlet/servlet.FileDownload?file=01530000001HxWB&quot;,&quot;Amber&quot;,16,16),
+&quot;Green&quot;, IMAGE(&quot;/servlet/servlet.FileDownload?file=01530000001HxW9&quot;,&quot;Green&quot;,16,16),
+&quot;&quot;)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Red Amber Green Bullet</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

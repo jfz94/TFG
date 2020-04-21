@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All</fullName>
+    <columns>NAME</columns>
+    <columns>IsMonitored__c</columns>
+    <columns>Rating__c</columns>
+    <columns>Flag__c</columns>
+    <columns>Language__c</columns>
+    <columns>License__c</columns>
+    <columns>GitHub_URL__c</columns>
+    <filterScope>Everything</filterScope>
+    <label>All</label>
+</ListView>
