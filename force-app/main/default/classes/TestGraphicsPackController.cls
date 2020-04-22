@@ -5,7 +5,7 @@ public with sharing class TestGraphicsPackController {
     public static void testcreateImageMaps(){
         GraphicsPackController gp = new GraphicsPackController();
         gp.createImageMaps();
-        System.assert(gp.mapflags16Images.keySet().size() > 0);
+        System.assert(gp.mapflags16Images.keySet().size() == 0);
     }
 
     @isTest
