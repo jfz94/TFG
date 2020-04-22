@@ -22,6 +22,10 @@
     </types>
     <types>
         <members>*</members>
+        <name>CustomLabel</name>
+    </types>
+    <types>
+        <members>*</members>
         <name>CustomTab</name>
     </types>
     <types>
@@ -36,18 +40,26 @@
         <members>*</members>
         <name>Dashboard</name>
     </types>
-    <types>
+    <!--<types>
         <members>*</members>
         <name>FlexiPage</name>
-    </types>
+    </types>-->
     <types>
         <members>*</members>
         <name>Flow</name>
     </types>
-    <types>
+    <!--<types>
         <members>*</members>
         <name>Layout</name>
-    </types>
+    </types>-->
+    <types>
+        <members>*</members>
+        <name>ExternalDataSource</name>
+    </types>  
+    <types>
+        <members>*</members>
+        <name>AuthProvider</name>
+    </types>    
     <types>
         <members>*</members>
         <name>PathAssistant</name>

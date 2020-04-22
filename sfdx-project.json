@@ -3,7 +3,7 @@
         {
             "path": "force-app",
             "default": true,
-            "package": "tfg",
+            "package": "tfg1",
             "versionName": "Version 1.0",
             "versionNumber": "1.0.0.NEXT"
         }
@@ -12,6 +12,6 @@
     "sfdcLoginUrl": "https://login.salesforce.com",
     "sourceApiVersion": "47.0",
     "packageAliases": {
-        "tfg": "0Ho3X000000005QSAQ"
+        "tfg1": "0Ho3X000000005aSAA"
     }
 }

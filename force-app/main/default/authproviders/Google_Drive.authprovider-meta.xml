@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AuthProvider xmlns="http://soap.sforce.com/2006/04/metadata">
+    <authorizeUrl>https://accounts.google.com/o/oauth2/auth?access_type=offline&amp;approval_prompt=force</authorizeUrl>
+    <consumerKey>692844272223-g719jud4jbekm8h5qrrj832e4ookucqp.apps.googleusercontent.com</consumerKey>
+    <consumerSecret>GVFEqorVVPMaC1+mkclVZU9J2a4Dn2m5cEEY92ILatc=</consumerSecret>
+    <defaultScopes>openid email profile https://www.googleapis.com/auth/drive</defaultScopes>
+    <friendlyName>Google Drive</friendlyName>
+    <includeOrgIdInIdentifier>false</includeOrgIdInIdentifier>
+    <providerType>OpenIdConnect</providerType>
+    <sendAccessTokenInHeader>true</sendAccessTokenInHeader>
+    <sendClientCredentialsInHeader>false</sendClientCredentialsInHeader>
+    <sendSecretInApis>true</sendSecretInApis>
+    <tokenUrl>https://accounts.google.com/o/oauth2/token</tokenUrl>
+</AuthProvider>

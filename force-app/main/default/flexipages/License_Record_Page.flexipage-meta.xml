@@ -97,10 +97,10 @@
                 <name>parentFieldApiName</name>
                 <value>License__c.Id</value>
             </componentInstanceProperties>
-            <componentInstanceProperties>
+            <!--<componentInstanceProperties>
                 <name>relatedListApiName</name>
                 <value>AttachedContentNotes</value>
-            </componentInstanceProperties>
+            </componentInstanceProperties>-->
             <componentInstanceProperties>
                 <name>relatedListComponentOverride</name>
                 <value>NONE</value>
