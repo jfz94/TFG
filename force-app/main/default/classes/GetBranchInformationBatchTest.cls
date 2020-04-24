@@ -14,7 +14,7 @@ private class GetBranchInformationBatchTest {
             StaticResourceCalloutMock mock = new StaticResourceCalloutMock();
             mock.setStaticResource('BranchesMock');
             mock.setStatusCode(200);
-            mock.setHeader('Content-Type', 'application/xml');
+            mock.setHeader('Content-Type', 'application/json');
             Test.setMock(HttpCalloutMock.class, mock); 
             GetBranchInformationBatch batch = new GetBranchInformationBatch();
             Database.executeBatch(batch);

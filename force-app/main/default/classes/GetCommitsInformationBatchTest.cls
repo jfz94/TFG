@@ -18,7 +18,7 @@ public class GetCommitsInformationBatchTest {
             StaticResourceCalloutMock mock = new StaticResourceCalloutMock();
             mock.setStaticResource('CommitsMock');
             mock.setStatusCode(200);
-            mock.setHeader('Content-Type', 'application/xml');
+            mock.setHeader('Content-Type', 'application/json');
             Test.setMock(HttpCalloutMock.class, mock); 
             GetCommitsInformationBatch batch = new GetCommitsInformationBatch();
             Database.executeBatch(batch);

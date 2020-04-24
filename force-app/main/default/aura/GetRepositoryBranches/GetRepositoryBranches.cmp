@@ -14,7 +14,6 @@
                       targetFields ="{!v.simpleRecord}"
                       mode="VIEW"/>
     
-    <!-- Display Lightning Data Service errors, if any -->
 	<aura:if isTrue="{!not(empty(v.recordError))}">
     	<div class="recordError">
         	{!v.recordError}
