@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>Google Drive Token</label>
+    <protected>false</protected>
+    <values>
+        <field>Key__c</field>
+        <value xsi:type="xsd:string">692844272223-idlgddsk0bf826rq6en5660si0mlv0eb.apps.googleusercontent.com</value>
+    </values>
+    <values>
+        <field>Redirect_URI__c</field>
+        <value xsi:type="xsd:string">https://tfg-jordifelipzayas-dev-ed.my.salesforce.com/services/authcallback/Google_Drive</value>
+    </values>
+    <values>
+        <field>Refresh_Token__c</field>
+        <value xsi:type="xsd:string">1//04LU55iuyH-rlCgYIARAAGAQSNwF-L9IrZJjJ-eCWUrEwbRkLZonk1y84KCeNzxw99NdfSGUGFCm-AwxHJeXcdNIWoPVsAOUJC_A</value>
+    </values>
+    <values>
+        <field>Secret__c</field>
+        <value xsi:type="xsd:string">QMM4x4wbc-tMQZU4ZHZliUsl</value>
+    </values>
+</CustomMetadata>
