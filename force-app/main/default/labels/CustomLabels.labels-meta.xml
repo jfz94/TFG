@@ -7,11 +7,4 @@
         <shortDescription>EXTENSIONS_ACCEPTED_GD</shortDescription>
         <value>.jpg, .png, .txt, .pdf, .odt, .doc</value>
     </labels>
-    <labels>
-        <fullName>GOOGLE_DRIVE_FOLDER_ID</fullName>
-        <language>en_US</language>
-        <protected>true</protected>
-        <shortDescription>GOOGLE_DRIVE_FOLDER_ID</shortDescription>
-        <value>1SixfdkcmARs0QnQEj-O8et-qRaBuGkMJ</value>
-    </labels>
 </CustomLabels>

@@ -4,7 +4,7 @@ public class GoogleDriveController {
     @AuraEnabled
     public static String uploadFile(String attachmentId) {
         
-        Google_Drive__mdt gd = [SELECT Refresh_Token__c, Key__c, Secret__c, Redirect_URI__c FROM Google_Drive__mdt WHERE DeveloperName =: 'GD_Token']; 
+        Google_Drive__mdt gd = [SELECT Refresh_Token__c, Folder_Id__c, Key__c, Secret__c, Redirect_URI__c FROM Google_Drive__mdt WHERE DeveloperName =: 'GD_Token']; 
         String refreshtoken = gd.Refresh_Token__c;
 
         HttpRequest req = new HttpRequest();
@@ -29,7 +29,7 @@ public class GoogleDriveController {
         String bodyEncoded = EncodingUtil.base64Encode(myBlob);
         
         if(myBlob.size() < 12000000){
-            String FolderId= System.Label.GOOGLE_DRIVE_FOLDER_ID;
+            String FolderId= gd.Folder_Id__c;
             String boundary = '----------9889464542212';
             String delimiter = '\r\n--' + boundary + '\r\n';
             String close_delim = '\r\n--' + boundary + '--';

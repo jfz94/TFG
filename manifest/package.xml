@@ -44,18 +44,10 @@
         <members>*</members>
         <name>Dashboard</name>
     </types>
-    <!--<types>
-        <members>*</members>
-        <name>FlexiPage</name>
-    </types>-->
     <types>
         <members>*</members>
         <name>Flow</name>
     </types>
-    <!--<types>
-        <members>*</members>
-        <name>Layout</name>
-    </types>-->
     <types>
         <members>*</members>
         <name>ExternalDataSource</name>

@@ -113,14 +113,14 @@
         <type>Default</type>
     </actionOverrides>
     <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
-    <deploymentStatus>InDevelopment</deploymentStatus>
+    <deploymentStatus>Deployed</deploymentStatus>
     <enableFeeds>false</enableFeeds>
     <enableLicensing>false</enableLicensing>
     <enableReports>false</enableReports>
     <enableSearch>true</enableSearch>
     <externalDataSource>Google_Drive</externalDataSource>
     <externalName>items_Google_Drive</externalName>
-    <label>items_Google_Drive</label>
+    <label>Items Google Drive</label>
     <pluralLabel>items_Google_Drive</pluralLabel>
     <searchLayouts/>
 </CustomObject>
