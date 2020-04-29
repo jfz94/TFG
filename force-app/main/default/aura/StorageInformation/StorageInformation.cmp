@@ -4,8 +4,8 @@
     <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
     
     <lightning:card title="Storage Information">
-        <p>Data Storage available: {!v.storageSettings.Data_Storage_Remaining__c} MB of {!v.storageSettings.Data_Storage_Max__c} MB</p><br/>
-        <p>File Storage available: {!v.storageSettings.File_Storage_Remaining__c} MB of {!v.storageSettings.File_Storage_Max__c} MB</p><br/>
+        <p class="slds-p-horizontal_small">Data Storage available: {!v.storageSettings.Data_Storage_Remaining__c} MB of {!v.storageSettings.Data_Storage_Max__c} MB</p><br/>
+        <p class="slds-p-horizontal_small">File Storage available: {!v.storageSettings.File_Storage_Remaining__c} MB of {!v.storageSettings.File_Storage_Max__c} MB</p><br/>
         <lightning:button class="slds-m-top_small"  label="Refresh"  onclick="{!c.refreshStorageValues}" variant="brand" />
     </lightning:card>
 </aura:component>
