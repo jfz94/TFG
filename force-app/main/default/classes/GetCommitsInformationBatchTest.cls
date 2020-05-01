@@ -1,19 +1,11 @@
 @isTest
 public class GetCommitsInformationBatchTest {
     static testMethod void getCommitsInformationBatch_Test() {
-        GitHub_User__c repoOwner = new GitHub_User__c(
-            Login__c = 'jfz94'
-        );
+        GitHub_User__c repoOwner = TestDataFactory.createGitHubUser('jfz94', '14350484');
         insert repoOwner;
         
-        Repository__c rep = new Repository__c( 
-            Name = 'repoTest1',
-            Repository_Id__c = '83738',
-            IsMonitored__c = true,
-            GitHubOwner__c = repoOwner.Id
-        );
-        insert rep;
-
+        insert TestDataFactory.createRepository('repoTest1','83738', true, repoOwner);
+        
         Test.startTest();
             StaticResourceCalloutMock mock = new StaticResourceCalloutMock();
             mock.setStaticResource('CommitsMock');
@@ -23,5 +15,7 @@ public class GetCommitsInformationBatchTest {
             GetCommitsInformationBatch batch = new GetCommitsInformationBatch();
             Database.executeBatch(batch);
         Test.stopTest();
+        List<Commit__c> commits = [SELECT ID FROM Commit__c];
+        System.assertEquals(2, commits.size());
     }
 }

@@ -1,14 +1,7 @@
 @isTest
 public class GoogleDriveControllerTest {
     public static testMethod void uploadFileTest() {
-
-        ContentVersion cv=new Contentversion();
-        cv.Title='ABC';
-        cv.PathOnClient ='test';
-        Blob b=Blob.valueOf('Unit Test Attachment Body');
-        cv.VersionData=EncodingUtil.base64Decode('Unit Test Attachment Body');
-        cv.PathOnClient = cv.Title + '.pdf';
-        insert cv;
+        insert TestDataFactory.createContentVersion('ABC','test','Unit Test Attachment Body');
 
         Test.startTest();
             StaticResourceCalloutMock mock = new StaticResourceCalloutMock();
@@ -18,7 +11,8 @@ public class GoogleDriveControllerTest {
             Test.setMock(HttpCalloutMock.class, mock); 
 
             ContentDocument doc = [SELECT ID FROM ContentDocument LIMIT 1];
-            GoogleDriveController.uploadFile(doc.Id);
+            String result = GoogleDriveController.uploadFile(doc.Id);
+            System.assertEquals('200', result);
         Test.stopTest();
     }
 }

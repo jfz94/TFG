@@ -1,12 +1,10 @@
 @isTest
 private class GetBranchInformationBatchTest {
     static testMethod void getBranchInformationBatch_Test() {
-        Repository__c rep = new Repository__c( 
-            Name = 'repoTest1',
-            Repository_Id__c = '83738',
-            IsMonitored__c = true
-        );
-        insert rep;
+        GitHub_User__c repoOwner = TestDataFactory.createGitHubUser('jfz94', '14350484');
+        insert repoOwner;
+
+        insert TestDataFactory.createRepository('repoTest1','83738', true, repoOwner);
 
         Administrator__mdt admin = new Administrator__mdt(Email__c = 'test@gmail.com');
 

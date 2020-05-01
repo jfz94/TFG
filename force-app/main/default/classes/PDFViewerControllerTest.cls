@@ -23,7 +23,9 @@ private class PDFViewerControllerTest {
         insert cdl;
         
         Test.startTest();
-            PDFViewerController.getRelatedFilesByRecordId(String.valueOf(rep.Id));
+            Map<ID, String> relatedDocs = PDFViewerController.getRelatedFilesByRecordId(String.valueOf(rep.Id));
+            System.assertNotEquals(0, relatedDocs.size());
+            System.assertEquals(true, relatedDocs.containsKey(documents[0].Id));
         Test.stopTest();
     }
 }
