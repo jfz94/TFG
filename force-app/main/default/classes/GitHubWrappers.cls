@@ -37,9 +37,7 @@ public class GitHubWrappers {
         public String url {get;set;} 
         public String node_id {get;set;} 
     }
-    
-    /* BRANCH */
-    
+        
     public class Branch {
         public String name {get;set;} 
         public BranchCommit commit_Z {get;set;} 
@@ -50,8 +48,6 @@ public class GitHubWrappers {
         public String sha {get;set;} 
         public String url {get;set;} 
     }
-
-    /* COMMIT */
 
     public class CommitObject {
     

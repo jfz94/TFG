@@ -9,7 +9,7 @@ public class GoogleDriveController {
 
         HttpRequest req = new HttpRequest();
         req.setMethod('POST');
-        req.setEndpoint('https://www.googleapis.com/oauth2/v4/token');
+        req.setEndpoint(System.Label.GoogleDrive_URL_Token);
         req.setHeader('content-type', 'application/x-www-form-urlencoded');
         String messageBody = 'client_id=' + gd.Key__c + '&client_secret=' + gd.Secret__c + '&refresh_token='+refreshtoken+'&redirect_uri=' + gd.Redirect_URI__c + '&grant_type=refresh_token';
         req.setHeader('Content-length', String.valueOf(messageBody.length()));
@@ -39,7 +39,7 @@ public class GoogleDriveController {
                 String body = delimiter + 'Content-Type: application/json\r\n\r\n' + '{ "title" : "' + cvFile[0].Title + '",' + '"parents":[{"id":"'+ FolderId +'"}]}' + delimiter + 'Content-Type: ' + Util.CONTENT_TYPE_BY_EXTENSION.get(cvFile[0].FileExtension.toLowerCase()) + '\r\n' + 'Content-Transfer-Encoding: base64\r\n' + '\r\n' + bodyEncoded + close_delim;
                     
                 req = new HttpRequest();
-                req.setEndpoint('https://www.googleapis.com/upload/drive/v2/files?uploadType=multipart&withLink=true');
+                req.setEndpoint(System.Label.GoogleDrive_URL_Upload);
                 req.setHeader('Authorization', 'Bearer ' + accesstoken);
                 req.setHeader('Content-Type', 'multipart/mixed; boundary="' + boundary + '"');
                 req.setHeader('Content-length', String.valueOf(body.length()));

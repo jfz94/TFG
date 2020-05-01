@@ -3,14 +3,12 @@ global with sharing class GitHub {
     public static Map<String,String> picklistValueByLabel = new Map<String,String>();
 
     static{
-
         Schema.DescribeFieldResult fieldResult = Order_option__mdt.Order_Option__c.getDescribe();
 		List<Schema.PicklistEntry> ple = fieldResult.getPicklistValues();
         
 		for( Schema.PicklistEntry pickListVal : ple){
             picklistValueByLabel.put(pickListVal.getLabel(), pickListVal.getValue());
 		}  
-
     }
 
 

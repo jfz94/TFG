@@ -53,14 +53,14 @@
 
 					if(response.getReturnValue().length == 0) {
 						resultsToast.setParams({
-							"title": "Warning",
-							"message": "No records have been found in GitHub with that name",
+							"title": $A.get("$Label.c.Search_error_title"),
+							"message": $A.get("$Label.c.Search_error_message"),
 							type: 'warning'
 						});
 					}else{
 						resultsToast.setParams({
-							"title": "Success",
-							"message": response.getReturnValue().length + " records have been created/ updated and ready for being monitored.",
+							"title": $A.get("$Label.c.Search_success_title"),
+							"message": response.getReturnValue().length + " " + $A.get("$Label.c.Search_success_message"),
 							type: 'success'
 						});
 					}
@@ -71,8 +71,8 @@
 		}else{
 			var resultsToast = $A.get("e.force:showToast");
 			resultsToast.setParams({
-				"title": "Required data missing",
-				"message": "Name or description should be filled",
+				"title": $A.get("$Label.c.Required_data_missing"),
+				"message": $A.get("$Label.c.Search_message_error"),
 				type: 'error'
 			});
 			resultsToast.fire();

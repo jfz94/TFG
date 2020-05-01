@@ -1,10 +1,170 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
     <labels>
+        <fullName>Branches_not_succesfully_updated</fullName>
+        <categories>Branches</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Branches not succesfully updated</shortDescription>
+        <value>There was an error refreshing branches from GitHub</value>
+    </labels>
+    <labels>
+        <fullName>Branches_succesfully_updated</fullName>
+        <categories>Branches</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Branches succesfully updated</shortDescription>
+        <value>Branches have been refreshed from GitHub</value>
+    </labels>
+    <labels>
+        <fullName>Commits_not_succesfully_updated</fullName>
+        <categories>Commits</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Commits not succesfully updated</shortDescription>
+        <value>There was an error refreshing commits from GitHub</value>
+    </labels>
+    <labels>
+        <fullName>Commits_succesfully_updated</fullName>
+        <categories>Commits</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Commits succesfully updated</shortDescription>
+        <value>Commits have been refreshed from GitHub</value>
+    </labels>
+    <labels>
         <fullName>EXTENSIONS_ACCEPTED_GD</fullName>
         <language>en_US</language>
         <protected>true</protected>
         <shortDescription>EXTENSIONS_ACCEPTED_GD</shortDescription>
-        <value>.jpg, .png, .txt, .pdf, .odt, .doc</value>
+        <value>.jpg, .png, .pdf, .txt, .odt, .doc</value>
+    </labels>
+    <labels>
+        <fullName>GoogleDrive_URL_Token</fullName>
+        <categories>Google Drive</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>GoogleDrive URL Token</shortDescription>
+        <value>https://www.googleapis.com/oauth2/v4/token</value>
+    </labels>
+    <labels>
+        <fullName>GoogleDrive_URL_Upload</fullName>
+        <categories>Google Drive</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>GoogleDrive URL Upload</shortDescription>
+        <value>https://www.googleapis.com/upload/drive/v2/files?uploadType=multipart&amp;withLink=true</value>
+    </labels>
+    <labels>
+        <fullName>Google_Drive_error_message</fullName>
+        <categories>Google Drive</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Google Drive error message</shortDescription>
+        <value>There was some error in the upload process</value>
+    </labels>
+    <labels>
+        <fullName>Google_Drive_error_title</fullName>
+        <categories>Google Drive</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Google Drive error title</shortDescription>
+        <value>File Not Uploaded in Google Drive</value>
+    </labels>
+    <labels>
+        <fullName>Google_Drive_success_message</fullName>
+        <categories>Google Drive</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Google Drive success message</shortDescription>
+        <value>File was successfully uploaded in Google Drive</value>
+    </labels>
+    <labels>
+        <fullName>Google_Drive_success_title</fullName>
+        <categories>Google Drive</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Google Drive success title</shortDescription>
+        <value>File Uploaded in Google Drive</value>
+    </labels>
+    <labels>
+        <fullName>Required_data_missing</fullName>
+        <categories>General</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Required data missing</shortDescription>
+        <value>Required data is missing</value>
+    </labels>
+    <labels>
+        <fullName>Search_error_message</fullName>
+        <categories>Search</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Search error message</shortDescription>
+        <value>No records have been found in GitHub with that name</value>
+    </labels>
+    <labels>
+        <fullName>Search_error_title</fullName>
+        <categories>Search</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Search error title</shortDescription>
+        <value>No records found</value>
+    </labels>
+    <labels>
+        <fullName>Search_message_error</fullName>
+        <categories>Search</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Search message error</shortDescription>
+        <value>Name or description should be filled</value>
+    </labels>
+    <labels>
+        <fullName>Search_success_message</fullName>
+        <categories>Search</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Search success message</shortDescription>
+        <value>records have been created/ updated and ready for being monitored.</value>
+    </labels>
+    <labels>
+        <fullName>Search_success_title</fullName>
+        <categories>Search</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Search success title</shortDescription>
+        <value>Records Found</value>
+    </labels>
+    <labels>
+        <fullName>Storage_error_message</fullName>
+        <categories>Storage</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Storage error message</shortDescription>
+        <value>Storage limits were not refreshed</value>
+    </labels>
+    <labels>
+        <fullName>Storage_error_title</fullName>
+        <categories>Storage</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Storage error title</shortDescription>
+        <value>Storage settings not updated</value>
+    </labels>
+    <labels>
+        <fullName>Storage_success_message</fullName>
+        <categories>Storage</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Storage success message</shortDescription>
+        <value>Storage limits have being refreshed</value>
+    </labels>
+    <labels>
+        <fullName>Storage_success_title</fullName>
+        <categories>Storage</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Storage success title</shortDescription>
+        <value>Storage limits updated</value>
     </labels>
 </CustomLabels>

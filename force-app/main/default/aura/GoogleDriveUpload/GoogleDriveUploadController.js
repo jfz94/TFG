@@ -12,11 +12,22 @@
             var status = response.getState();
             if(status === "SUCCESS"){
                 var responseCode = response.getReturnValue();
+                var resultsToast = $A.get("e.force:showToast");
+
                 if(responseCode == '200'){
-                    alert('File Uploaded successfully');
+                    resultsToast.setParams({
+                        "title": $A.get("$Label.c.Google_Drive_success_title"),
+                        "message": $A.get("$Label.c.Google_Drive_success_message"),
+                        type: 'Success'
+                    });
                 }else{
-                    alert('There was some error');
+                    resultsToast.setParams({
+                        "title": $A.get("$Label.c.Google_Drive_error_title"),
+                        "message": $A.get("$Label.c.Google_Drive_error_message"),
+                        type: 'Error'
+                    });
                 }
+                resultsToast.fire();
             }
         });
         

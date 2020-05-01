@@ -2,9 +2,7 @@ public without sharing class GitHubUserHandler {
 
     public static List<GitHub_User__c> usersToGetRepositories  = new List<GitHub_User__c>();
 
-
-    public GitHubUserHandler(){ 
-    }
+    public GitHubUserHandler(){ }
 
     public void onBeforeUpdate(List<GitHub_User__c> triggerOld , List<GitHub_User__c> triggerNew , Map<Id, GitHub_User__c> triggerOldMap , Map<Id, GitHub_User__c> triggerNewMap) {
         for(GitHub_User__c user : triggerNew) {

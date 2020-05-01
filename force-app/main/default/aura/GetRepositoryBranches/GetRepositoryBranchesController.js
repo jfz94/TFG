@@ -29,7 +29,7 @@
 				if (state === "SUCCESS") {
 					resultsToast.setParams({
 						"title": "Success",
-						"message": "Branches have been refreshed from GitHub",
+						"message": $A.get("$Label.c.Branches_succesfully_updated"), 
 						type: 'success'
 					});
 					resultsToast.fire();
@@ -37,7 +37,7 @@
 				}else{
 					resultsToast.setParams({
 						"title": "Error",
-						"message": "Something went wrong",
+						"message": $A.get("$Label.c.Branches_not_succesfully_updated"),
 						type: 'error'
 					});
 					resultsToast.fire();
@@ -48,7 +48,7 @@
 			var resultsToast = $A.get("e.force:showToast");
 			resultsToast.setParams({
 				"title": "Warning",
-				"message": "Required data is missing",
+				"message": $A.get("$Label.c.Required_data_missing"),
 				type: 'warning'
 			});
 			resultsToast.fire();
