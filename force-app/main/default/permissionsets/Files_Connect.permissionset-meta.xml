@@ -316,6 +316,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Repository__c.Login_User__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Repository__c.Node_Id__c</field>
         <readable>false</readable>
     </fieldPermissions>

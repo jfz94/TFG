@@ -1,0 +1,20 @@
+<aura:component implements="flexipage:availableForAllPageTypes,force:hasRecordId" controller="GitHostingRepoListRouter" access="global" extends="c:BaseList">
+    
+    <aura:handler name="init" value="{!this}" action="{!c.goFetch}"/>
+
+    <aura:handler name="pageChangedFromParent" event="c:PageChanged" action="{!c.goFetch}"/>
+    <aura:attribute name="userName" type="String"  description="" access="private" />
+    
+    <aura:attribute name="hostingService" type="String" required="true" access="global"/>
+    <aura:attribute name="isUser" type="Boolean" default="true" access="global"/>
+    <aura:attribute name="showDescription" type="Boolean" default="false" access="global"/>
+
+    <aura:set attribute="title" value="{!v.userName + ' repositories on ' + v.hostingService}" />
+
+    <ul class="slds-has-dividers_bottom-space">
+        <aura:iteration items="{!v.items}" var="gitRepo">
+            <c:GitRepoItem repo="{!gitRepo}" shouldShowDescription="{!v.showDescription}"/>
+        </aura:iteration>
+    </ul>
+
+</aura:component>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApexTestSuite xmlns="http://soap.sforce.com/2006/04/metadata">
+    <testClassName>BranchInformationScheduleTest</testClassName>
+    <testClassName>GetBranchInformationBatchTest</testClassName>
+    <testClassName>GetCommitsInformationBatchTest</testClassName>
+    <testClassName>GitHubTest</testClassName>
+    <testClassName>GitHubUserHandlerTest</testClassName>
+    <testClassName>GoogleDriveControllerTest</testClassName>
+    <testClassName>PDFViewerControllerTest</testClassName>
+    <testClassName>SingleRequestMock</testClassName>
+    <testClassName>StorageTest</testClassName>
+</ApexTestSuite>
