@@ -38,7 +38,7 @@ For details about developing against orgs that don’t have source tracking, see
 ## Part 3: Deploying to Production
 
 In order to deploy this repository to a production organization we have provided the following package:
-(https://login.salesforce.com/packaging/installPackage.apexp?p0=04t3X000003Oz6L)
+[https://login.salesforce.com/packaging/installPackage.apexp?p0=04t3X000003Oz6L]
 Password: test1234
 
 * This package does not contain the RepoExplorer solution of Jonathan Wiesel
@@ -47,7 +47,7 @@ Password: test1234
 
 This Repository contain part of repository called  "RepoExplorer" of Jonathan Wiesel, which has the following Copyright.
 
-URL: (https://github.com/jonathanwiesel/RepoExplorer)
+URL: [https://github.com/jonathanwiesel/RepoExplorer]
 
 Copyright 2018 Jonathan Wiesel
 
